@@ -25,20 +25,22 @@ function Register() {
   };
 
   return (
-    <div className="min-h-[90%] flex items-center justify-center bg-gradient-to-br from-blue-200 to-blue-400 px-4">
+    <div className="h-screen flex items-center justify-center bg-gradient-to-br from-green-100 to-green-200 px-4">
       <div className="bg-white p-8 rounded-xl shadow-lg w-full max-w-md">
-        <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">
-          Register
+        <h2 className="text-2xl font-bold mb-6 text-center text-green-700">
+          Register for VedaAI
         </h2>
+
         {message && (
           <p
             className={`mb-4 text-center ${
-              isError ? "text-red-500" : "text-green-600"
+              isError ? "text-red-600" : "text-green-600"
             }`}
           >
             {message}
           </p>
         )}
+
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
             <label
@@ -50,7 +52,7 @@ function Register() {
             <input
               type="text"
               id="username"
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-green-700 focus:ring-2 focus:ring-green-200"
               placeholder="Enter your username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
@@ -68,7 +70,7 @@ function Register() {
             <input
               type="email"
               id="email"
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-green-700 focus:ring-2 focus:ring-green-200"
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -86,7 +88,7 @@ function Register() {
             <input
               type="password"
               id="password"
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-green-700 focus:ring-2 focus:ring-green-200"
               placeholder="Enter your password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -96,7 +98,7 @@ function Register() {
 
           <button
             type="submit"
-            className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded-lg transition-colors"
+            className="w-full bg-green-700 hover:bg-green-800 text-white font-semibold py-3 rounded-lg transition-colors"
           >
             Register
           </button>
